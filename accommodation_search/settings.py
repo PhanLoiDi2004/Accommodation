@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',   
+    'rest_framework.authtoken',  
+    'django_filters',
+    'corsheaders',      
     'accommodation',
-    'rest_framework',     
-    'corsheaders',         
+
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -131,3 +135,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'accommodation.User'
+
+CORS_ALLOW_ALL_ORIGINS = True
